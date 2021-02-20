@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/class.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<header class="mui-bar mui-bar-nav">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">垃圾百科</h1>
+			</header>
+		</header>
+		
+		<section>
+			<div class="mui-slider">
+			  <div class="mui-slider-group">
+				<!-- 第一页 -->
+			   <!-- <div class="mui-slider-item">
+					<div id="class-title">
+						<h2>可回收物</h2>
+						<p>废纸张、废塑料、废玻璃制品、废金属、废织物等适宜回收、可循环利用的生活废弃物</p>
+					</div>
+					<div id="class-content">
+						<ul>
+							<li>laji</li>
+							<li>laji</li>
+							<li>laji</li>
+							<li>laji</li>
+							<li>laji</li>
+							<li>laji</li>
+							<li>laji</li>
+							<li>laji</li>
+							<li>laji</li>
+							<li>laji</li>		
+						</ul>
+					</div>
+			    </div> -->
+				<!-- 第一页结束 -->
+			  </div>
+			</div>
+		</section>
+	</body>
+<script src="js/mui.js"></script>
+<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	mui.init();
+	mui.plusReady(function () {
+	    mui.ajax('http://apis.juhe.cn/rubbish/category',{
+			data:{
+				key:'dfe7a5dc90a9be32d35d15d5a06eb619'
+			},
+			success:function(data){
+				var result = data.result;
+				mui.each(result,function(index,item){
+					mui('.mui-slider-group')[0].innerHTML +=`
+					<div class="mui-slider-item">
+						<div id="class-title">
+							<h3>${item.name}介绍</h3>
+							<p>${item.explain}</p>
+						</div>
+						<div id="class-content-1">
+							<h3>${item.name}处理方法</h3>
+							<p>${item.require}</p>
+						</div>
+						<div id="class-content">
+							<h3>常见${item.name}</h3>
+							<p>${item.common}</p>
+						</div>
+					</div>
+					`;
+				});
+				mui('.mui-slider').slider().gotoItem(0);
+			}
+		})
+	});
+</script>
+</html>

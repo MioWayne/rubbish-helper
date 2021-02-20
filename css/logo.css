@@ -1,0 +1,40 @@
+header a{
+	color: #000!important;
+}
+
+header .mui-title{
+	text-align: left;
+}
+
+section{
+	margin-top: 1.666666rem;
+}
+
+.l-style{
+	position: relative;
+	width: 90%;
+	height:4rem;
+	margin: auto;
+	margin-top: 0.6rem;
+	border-radius: 0.833333rem;
+}
+
+.l-style h3{
+	color: #fff;
+	line-height: 4rem;
+	padding-left: 1.2rem;
+	font-size: 0.666666rem;
+}
+
+.l-style img{
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	margin-top: -15%;
+	width: 30%;
+}
+
+#logo-1{background-color:rgb(17,86,140);}
+#logo-2{background-color:rgb(0,114,41);}
+#logo-3{background-color:rgb(60,91,89);}
+#logo-4{background-color:rgb(186,57,78);}

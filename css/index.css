@@ -1,0 +1,68 @@
+header h1{
+	padding-top: 1.25rem;
+	padding-left: 0.666666rem;
+	color: #505050;
+}
+
+header ul{
+	display: flex;
+	justify-content: space-around;
+	padding-top: 0.666666rem;
+}
+
+header ul li{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 0.666666rem;
+}
+
+header ul li i{
+	width: 2rem;
+	height: 2rem;
+	background-color: #FFFFFF;
+	border-radius: 100%;
+	font-size: 1.2rem!important;
+	line-height: 2rem;
+	box-shadow: 0 0  0.2rem #CCC;
+	color: #676767;
+}
+
+header ul li span{
+	margin-top: 0.416666rem;
+	font-size: 0.5rem;
+	font-weight: 700;
+	color: #505050;
+}
+
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2rem;
+	color: #505050;
+}
+
+footer i{
+	position: absolute;
+	left: 50%;
+	top: -3rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	background: #FFFFFF;
+	border-radius: 100%;
+	text-align: center;
+	line-height: 2.5rem;
+	font-size: 1.6rem!important;
+	box-shadow: 0 0  0.3rem #CCC;
+	margin-left: -1.25rem;
+}
+
+footer span{
+	display: inline-block;
+	font-size: 0.583333rem;
+	font-weight: 800;
+	width: 100%;
+	text-align: center;
+}
